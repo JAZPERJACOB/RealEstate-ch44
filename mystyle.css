@@ -1,0 +1,11 @@
+/*Header*/
+.site-init{
+    background-image: url(./img/header.jpg);
+    background-size: cover;
+    height: 200px;
+    text-align: center;
+    color: white;
+}
+.site-init a{
+    color: white;
+}
