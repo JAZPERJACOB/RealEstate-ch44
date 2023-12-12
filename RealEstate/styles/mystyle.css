@@ -9,27 +9,49 @@ body{
 p{
     line-height: 2;
 }
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
 /*Utilities*/
 .container{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
-.house-item{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    padding-right: 50px;
+@media(max-width: 768px){
+    .container{
+        width: 95%;
+    }
 }
-.house-img{
-    margin-bottom: 40%;
+.title{
+    text-align: center;
+}
+
+/*houses and penthouses*/
+.houses-container{
+    display: flex;
+    flex-direction: row;
+}
+.house-item{
+    background-color: #dedede;
+    margin-right: 10px;
+}
+@media(max-width: 768px) {
+    .houses-container{
+        flex-direction: column;
+    }
 }
 .house-text{
-    display: inline-block;
-    margin-top: 20%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px;
+}
+.icons-container{
+    display: flex;
+}
+.icon-item{
+    display: flex;
 }
 
 .see-details-btn{
@@ -39,10 +61,10 @@ p{
     text-decoration: none;
     padding: 10px;
 }
-.house-img img{
-    width: 400px;
+button{
+    color: white;
+    background-color: limegreen;
 }
-
 
 /*Header*/
 .site-init{
@@ -52,19 +74,47 @@ p{
     text-align: center;
     color: white;
 }
-.site-init a{
+.site-init a, 
+.site-secondary a{
     color: white;
 }
 .bar{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     height: 100px;
     align-items: center;
 }
+@media(max-width: 768px){
+    .bar{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .site-init{
+        height: 20vh;
+    }
+
+}
+.site-secondary{
+    background-color: #1f1f1f;
+    color: white;
+    height: 30vh;
+    background-size: auto;
+    text-align: center;
+    justify-content: space-around;
+}
+
+/*more about us*/
 .more-about-container{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     margin-top: 40px;
+}
+@media(max-width: 768px){
+    .more-about-container{
+        flex-direction: column;
+    }
 }
 .more-about-item{
     padding: 10px;
@@ -80,4 +130,81 @@ p{
     text-align: center;
     text-transform: uppercase;
     margin-top: 10px;
+}
+/*contact*/
+fieldset{
+    padding: 20px;
+}
+legend{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.input-container{
+    padding: 10px;
+}
+.input-container label{
+    display: inline-block;
+    width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.input-container input,
+.input-container textarea, select{
+    background-color: lightgray;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+/*about-page*/
+
+.about-page-container{
+    display: flex;
+
+}
+.about-header-page{
+    background-image: url(../img/encuentra.jpg);
+    background-size: cover;
+    height: 40vh;
+    text-align: center;
+    color: white;
+}
+.about-header-page a{
+    color: white;
+}
+.about-page-img{
+    margin-right: 10px;
+    padding: 10px;
+    width: 30%;
+}
+.about-paragraph{
+    width: 65%;
+}
+
+/*blog-page header*/
+
+.blog-header{
+    background-image: url(../img/announcement6.jpg);
+    background-size: auto;
+    height: 40vh;
+    text-align: center;
+    color: white;
+}
+.blog-header a{
+    color: white;
+}
+.blog-container{
+    text-align: center;
+    justify-content: space-between;
+    padding: 5%;
+    line-height: 2;
+}
+.blog-image{
+    text-align: center;
+    padding: 5%;
+    line-height: 10em;
+}
+.blog-image-container{
+    display: flex;
 }
